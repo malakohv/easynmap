@@ -27,16 +27,16 @@ if [ $INPUT -eq 1 ]
 then
      while true
      do
-     nmap -sU -p $UPORT -sV -O $TARIP
+     nmap -Pn -sU -p $UPORT -sV -O $TARIP
      sleep $SLEEP
-     nmap -sS -p $TPORT -sV -O $TARIP
+     nmap -Pn -sS -p $TPORT -sV -O $TARIP
      sleep $SLEEP
 done
 
 else
-     nmap -sU -p $UPORT -sV -O $TARIP
+     nmap -Pn -sU -p $UPORT -sV -O $TARIP
      sleep $SLEEP
-     nmap -sS -p $TPORT -sV -O $TARIP
+     nmap -Pn -sS -p $TPORT -sV -O $TARIP
 break
 
 fi
